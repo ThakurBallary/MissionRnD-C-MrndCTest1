@@ -84,19 +84,22 @@ int main(){
 	//Test Sequences
 
 	//Test Circular Linked Lists
-	/*
 	struct node *head1 = NULL;
 	struct node *head2 = NULL;
-	int a[] = {0,3,5,10,20};
-	int b[] = {1,2,6,11,21,50,70};
-	for (int i = 0; i < 5; i++) {
+	int a[] = {5,3,1};
+	int b[] = {6,4,2};
+	for (int i = 0; i < 3; i++) {
 		addNode(&head1, a[i]);
 	}
-	for (int i = 0; i < 7; i++) {
+	for (int i = 0; i < 3; i++) {
 		addNode(&head2, b[i]);
 	}
-	int merge_circularlists(struct node **head1, struct node **head2)
-	*/
+	printSll(head1, 3);
+	printSll(head2, 3);
+	make_it_circular(head1);
+	make_it_circular(head2);
+	int m = merge_circularlists(&head1, &head2);
+	
     //Test Between Days
 	/*
 	int dates[2][8] = { { 0, 2, 0, 4, 2, 0, 1, 6 }, { 0, 4, 0, 4, 2, 0, 1, 6 } };
