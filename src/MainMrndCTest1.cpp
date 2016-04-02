@@ -69,7 +69,12 @@ void printSll(struct node *head,int len){
 
 void make_it_circular(struct node *head){
 	//Makes a Normal SLL circular ,Make Last->next=head;
-
+	struct node *temp = head;
+	while (temp->next != NULL)
+	{
+		temp = temp->next;
+	}
+	temp->next = head;
 }
 
 //End of Helper Functions
@@ -79,7 +84,19 @@ int main(){
 	//Test Sequences
 
 	//Test Circular Linked Lists
-
+	/*
+	struct node *head1 = NULL;
+	struct node *head2 = NULL;
+	int a[] = {0,3,5,10,20};
+	int b[] = {1,2,6,11,21,50,70};
+	for (int i = 0; i < 5; i++) {
+		addNode(&head1, a[i]);
+	}
+	for (int i = 0; i < 7; i++) {
+		addNode(&head2, b[i]);
+	}
+	int merge_circularlists(struct node **head1, struct node **head2)
+	*/
     //Test Between Days
 	/*
 	int dates[2][8] = { { 0, 2, 0, 4, 2, 0, 1, 6 }, { 0, 4, 0, 4, 2, 0, 1, 6 } };
